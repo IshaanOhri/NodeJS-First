@@ -8,6 +8,7 @@ const request = require('request')
 const express = require('express')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // console.log(utils.add(2,3))
 
@@ -136,6 +137,6 @@ app.get('/help', (req, res) => {
     res.send(obj)
 })
 
-app.listen(3000, () => {
-    console.log('Running on port 3000')
+app.listen(port, () => {
+    console.log('Running on port ' + port)
 })
